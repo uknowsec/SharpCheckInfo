@@ -8,6 +8,7 @@ Github: https://github.com/uknowsec/SharpCheckInfo
 
 Usage: SharpCheckInfo -All
        SharpCheckInfo -EnvironmentalVariables
+       SharpCheckInfo -GetRecycle
        SharpCheckInfo -AllUserDirectories
        SharpCheckInfo -PowershellInfo
        SharpCheckInfo -CsharpVersion
@@ -21,6 +22,7 @@ Usage: SharpCheckInfo -All
 ```
 
 - EnvironmentalVariables
+- Get RecycleBin Filenames
 - Computer architecture
 - Current user and privs
 - Installed PowerShell versions
