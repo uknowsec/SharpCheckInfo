@@ -148,7 +148,11 @@ namespace SharpCheckInfo
             Console.WriteLine("\tDomain: " + Environment.UserDomainName);
             //获取系统环境变量 用以判断是否安装Java,Python等编程环境
             Console.WriteLine("\n[+] System environment variable Path");
-            string sPath = Environment.GetEnvironmentVariable("Path");
+            string path = "Environment";
+            RegistryKey masterKey = Registry.CurrentUser.OpenSubKey(path);
+            string sPath = masterKey.GetValue("Path").ToString();
+            masterKey.Close();
+            //string sPath = Environment.GetEnvironmentVariable("Path");
             string[] sArray = Regex.Split(sPath, ";", RegexOptions.IgnoreCase);
             foreach (string i in sArray)
             {
